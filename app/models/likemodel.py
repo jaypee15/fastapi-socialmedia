@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer,ForeignKey
 
 
-from database.db import Base
+from app.database.db import Base
 
 class Like(Base):
     __tablename__ ="likes"

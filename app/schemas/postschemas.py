@@ -1,7 +1,9 @@
 from pydantic import BaseModel
 from datetime import datetime
 
-from userschemas import UserOut
+from .userschemas import UserOut
+
+
 class PostBase(BaseModel):
     title: str
     content: str
@@ -9,7 +11,7 @@ class PostBase(BaseModel):
 
 
 class PostCreate(PostBase):
-    pass 
+    pass
 
 
 class Post(PostBase):
@@ -21,8 +23,9 @@ class Post(PostBase):
     class Config:
         orm_mode = True
 
+
 class PostOut(BaseModel):
-    Post:Post
+    Post: Post
     votes: int
 
     class Config:
