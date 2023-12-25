@@ -1,9 +1,9 @@
-from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
+from fastapi import Response, status, HTTPException, Depends, APIRouter
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 
 from app.schemas import postschemas
-from app.models import postmodel, likemodel, usermodel
+from app.models import postmodel, likemodel
 from app.database.db import get_db
 from app.crud import user_crud
 
