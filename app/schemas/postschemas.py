@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from datetime import datetime
 
-from .userschemas import UserOut
+from app.schemas.userschemas import UserOutSchema
 
 
 class PostBase(BaseModel):
@@ -18,10 +18,10 @@ class Post(PostBase):
     id: int
     created_at: datetime
     owner_id: int
-    owner: UserOut
+    owner: UserOutSchema
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class PostOut(BaseModel):
@@ -29,4 +29,4 @@ class PostOut(BaseModel):
     votes: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True

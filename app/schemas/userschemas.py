@@ -1,20 +1,27 @@
 from pydantic import BaseModel, EmailStr
 from datetime import datetime
 
+from app.schemas.tokenschemas import TokenSchema
 
-class UserBase(BaseModel):
+class UserBaseSchema(BaseModel):
     email: EmailStr
-class UserOut(UserBase):
-    id: str
+class UserOutSchema(UserBaseSchema):
+    id: int
     created_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+
+class UserSchema(UserBaseSchema):
+    created_at: datetime
+
+    class Config:
+        from_attributes = True
 
 
-class UserCreate(UserBase):
+class UserCreateSchema(UserBaseSchema):
     password: str
 
-
-class UserLogin(UserBase):
-    password: str
+class UserWithTokenSchema(UserBaseSchema, TokenSchema):
+    class Config:
+        from_attributes = True

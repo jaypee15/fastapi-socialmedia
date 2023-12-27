@@ -15,7 +15,7 @@ class Post(Base):
     content = Column(String, nullable=False, index=True)
     published = Column(Boolean, server_default="True", nullable=False)
     created_at = Column(DateTime(timezone=True), nullable=False,
-                        default=func.now())
+                        server_default=func.now())
     owner_id = Column(Integer, ForeignKey(
         "users.id", ondelete="CASCADE"), nullable=False)
     owner = relationship("User")
