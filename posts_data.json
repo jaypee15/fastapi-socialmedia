@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Excited about my new project!  #coding #python",
+    "content": "Just started working on a cool project using Python. Can't wait to see the final result! #programming #webdev",
+    "published": true,
+    "owner_id": 1
+  },
+  {
+    "title": "Morning coffee vibes ",
+    "content": "Starting the day with a cup of coffee and some coding. #morningroutine #codinglife",
+    "published": true,
+    "owner_id": 2
+  },
+  {
+    "title": "Tech conference update ",
+    "content": "Attended an amazing tech conference today. Learned so much and met some awesome people! #techcommunity #conference",
+    "published": true,
+    "owner_id": 1
+  },
+  {
+    "title": "Late-night coding session ",
+    "content": "Working on a challenging coding problem late into the night. #latenightcoding #challengeaccepted",
+    "published": true,
+    "owner_id": 1
+  },
+  {
+    "title": "New blog post coming soon...",
+    "content": "Stay tuned for my upcoming blog post. I'll be sharing some insights on the latest tech trends. #blogging #techtrends",
+    "published": true,
+    "owner_id": 2
+  },
+  {
+    "title": "Feeling accomplished today!",
+    "content": "Successfully deployed my latest project. Celebrating small victories! #achievementunlocked #codingwin",
+    "published": true,
+    "owner_id": 2
+  },
+  {
+    "title": "Weekend coding plans ",
+    "content": "Planning to spend the weekend diving into a new coding language. Any recommendations? #codingweekend #programming",
+    "published": true,
+    "owner_id": 1
+  },
+  {
+    "title": "Favorite coding playlist on repeat ",
+    "content": "Coding + favorite playlist = perfect combo. What's your favorite coding music? #codingmusic #playlist",
+    "published": true,
+    "owner_id": 2
+  },
+  {
+    "title": "Bug squashing day!",
+    "content": "Spent the day squashing bugs in my code. It's challenging but so satisfying! #bugfixing #codinglife",
+    "published": true,
+    "owner_id": 1
+  },
+  {
+    "title": "Productive Monday vibes ",
+    "content": "Starting the week with a positive mindset. Let's make it a productive one! #MondayMotivation #coding",
+    "published": true,
+    "owner_id": 1
+  }
+]

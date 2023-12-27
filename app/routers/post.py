@@ -53,7 +53,7 @@ def get_post(
 ):
     post = (
         db.query(postmodel.Post, func.count(likemodel.Like.post_id).label("likes"))
-        .join(likemodel.Like, likemodel.Like.post_id, isouter=True)
+        .join(likemodel.Like, likemodel.Like.post_id==postmodel.Post.id, isouter=True)
         .group_by(postmodel.Post.id)
         .filter(postmodel.Post.id == id)
         .first()
@@ -61,6 +61,8 @@ def get_post(
 
     if not post:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
+    
+    return post 
 
 
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
@@ -69,8 +71,8 @@ def delete_post(
     db: Session = Depends(get_db),
     current_user: int = Depends(user_crud.get_current_user),
 ):
-    post = db.query(postmodel.Post).filter(postmodel.Post.id == id)
-    post_query = post.first()
+    post_query = db.query(postmodel.Post).filter(postmodel.Post.id == id)
+    post = post_query.first()
 
     if post == None:
         raise HTTPException(

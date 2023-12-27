@@ -26,7 +26,7 @@ class Post(PostBase):
 
 class PostOut(BaseModel):
     Post: Post
-    votes: int
+    likes: int
 
     class Config:
         from_attributes = True
