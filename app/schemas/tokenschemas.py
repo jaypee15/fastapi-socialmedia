@@ -7,4 +7,5 @@ class TokenSchema(BaseModel):
 
 
 class TokenDataSchema(BaseModel):
+    # String or non, fix
     email: str = None
